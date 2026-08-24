@@ -1,0 +1,272 @@
+h2{
+    padding:20px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+}
+
+th,td{
+    padding:15px;
+    border-bottom:1px solid #ddd;
+    font-size:14px;
+    text-align: center;
+}
+
+th{
+    background:#b81414;
+    color:#fff;
+}
+
+.btn-info{
+    background:#3498db;
+    color:#fff;
+    padding:6px 12px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+
+.btn-cancel {
+    background-color: #b81414;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* ===== MODAL ===== */
+
+.modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+    z-index:9999;
+}
+
+.modal-content{
+    background:#fff;
+    margin:8% auto;
+    padding:40px;
+    width:700px;
+    border-radius:15px;
+    text-align:center;
+    position:relative;
+    animation:fadeIn .3s ease;
+}
+
+@keyframes fadeIn{
+    from{transform:translateY(-20px);opacity:0;}
+    to{transform:translateY(0);opacity:1;}
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+/* ===== PROGRESS ===== */
+
+.progress-container{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    margin-top:50px;
+}
+
+.progress-container::before{
+    content:"";
+    position:absolute;
+    top:25px;
+    left:0;
+    width:100%;
+    height:4px;
+    background:#ddd;
+}
+
+.progress-line{
+    position:absolute;
+    top:25px;
+    left:0;
+    height:4px;
+    width:0%;
+    background:#28a745;
+    transition:.5s;
+}
+
+.progress-step{
+    width:25%;
+    text-align:center;
+    position:relative;
+}
+
+.circle{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#ccc;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-weight:bold;
+    font-size:18px;
+    transition:.4s;
+}
+
+.circle.active{
+    background:#28a745;
+    transform:scale(1.1);
+}
+
+.progress-step p{
+    margin-top:10px;
+    font-size:13px;
+    color:#444;
+}
+
+.rejected-text{
+    color:red;
+    margin-top:20px;
+    font-size:14px;
+    font-weight:500;
+}
+
+/* ============================= */
+/* ===== RESPONSIVE MOBILE ===== */
+/* ============================= */
+
+@media (max-width: 768px){
+
+    h2{
+        padding:15px 0;
+        font-size:18px;
+        text-align:center;
+    }
+
+    /* ===== TABLE RESPONSIVE ===== */
+
+    table, thead, tbody, th, td, tr{
+        display:block;
+        width:100%;
+    }
+
+    thead{
+        display:none;
+    }
+
+    tr{
+        background:#fff;
+        margin-bottom:15px;
+        border-radius:10px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.05);
+        padding:10px;
+    }
+
+    td{
+        border:none;
+        border-bottom:1px solid #eee;
+        position:relative;
+        padding-left:45%;
+        font-size:13px;
+    }
+
+    td:last-child{
+        border-bottom:none;
+    }
+
+    td:before{
+        position:absolute;
+        left:12px;
+        top:12px;
+        width:40%;
+        font-weight:600;
+        font-size:12px;
+        color:#555;
+    }
+
+    td:nth-of-type(1):before{ content:"No"; }
+    td:nth-of-type(2):before{ content:"Tanggal Pengajuan"; }
+    td:nth-of-type(3):before{ content:"Nama"; }
+    td:nth-of-type(4):before{ content:"Divisi"; }
+    td:nth-of-type(5):before{ content:"Mobil Yang Di Pinjam"; }
+    td:nth-of-type(6):before{ content:"Tanggal Peminjaman (Dari)"; }
+    td:nth-of-type(7):before{ content:"Tanggal Peminjaman (Sampai)"; }
+    td:nth-of-type(8):before{ content:"Status Persetujuan"; }
+    td:nth-of-type(9):before{ content:"Pesan"; }
+    td:nth-of-type(10):before{ content:"Aksi"; }
+
+    .btn-info{
+        width:100%;
+        padding:8px;
+        font-size:13px;
+    }
+
+    /* ===== MODAL RESPONSIVE ===== */
+
+    .modal-content{
+        width:95%;
+        margin:20% auto;
+        padding:25px 15px;
+        border-radius:12px;
+    }
+
+    .close{
+        right:15px;
+        top:10px;
+        font-size:20px;
+    }
+
+    /* ===== PROGRESS RESPONSIVE ===== */
+
+    .progress-container{
+        flex-direction:column;
+        align-items:flex-start;
+        margin-top:30px;
+    }
+
+    .progress-container::before{
+        display:none;
+    }
+
+    .progress-line{
+        display:none;
+    }
+
+    .progress-step{
+        width:100%;
+        display:flex;
+        align-items:center;
+        margin-bottom:15px;
+        text-align:left;
+    }
+
+    .circle{
+        width:35px;
+        height:35px;
+        font-size:14px;
+        margin:0 10px 0 0;
+    }
+
+    .progress-step p{
+        margin:0;
+        font-size:13px;
+    }
+
+    .rejected-text{
+        font-size:13px;
+        text-align:left;
+    }
+}

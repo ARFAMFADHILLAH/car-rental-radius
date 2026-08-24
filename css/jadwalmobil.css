@@ -1,0 +1,115 @@
+/* =============================
+   RESET & GLOBAL
+============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+
+/* =============================
+   LAYOUT
+============================= */
+.content {
+    padding: 25px;
+    min-height: 100vh;
+}
+
+
+/* =============================
+   HEADINGS
+============================= */
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 30px 0 15px;
+}
+
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 992px) {
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    main {
+        padding: 18px;
+    }
+}
+
+/* =============================
+   MOBILE RESPONSIVE (HP)
+============================= */
+@media (max-width: 768px) {
+
+    /* ====== HEADINGS ====== */
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    /* ====== MONITORING CARDS ====== */
+    .monitoring-cards {
+        grid-template-columns: 1fr; /* dari 2 kolom jadi 1 */
+        gap: 15px;
+    }
+
+    .card-box {
+        padding: 15px;
+    }
+
+    /* ====== FULLCALENDAR ====== */
+    #calendar {
+        padding: 10px;
+    }
+
+    .fc-toolbar {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .fc-toolbar-title {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    
+
+    /* ====== CONTENT ====== */
+    .content {
+        padding: 12px;
+    }
+
+    main {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}

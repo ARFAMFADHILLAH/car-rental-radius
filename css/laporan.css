@@ -1,0 +1,270 @@
+/* =============================
+   RESET & GLOBAL
+============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+
+/* =============================
+   LAYOUT
+============================= */
+.content {
+    padding: 25px;
+    min-height: 100vh;
+}
+
+
+/* =============================
+   HEADINGS
+============================= */
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 30px 0 15px;
+}
+
+/* =============================
+   TABLE
+============================= */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.table thead {
+    background: #f8fafc;
+}
+
+.table th,
+.table td {
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.table th {
+    font-weight: 600;
+    color: #475569;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.table tbody tr:hover {
+    background: #f1f5f9;
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* =============================
+   BADGE
+============================= */
+.badge {
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.badge-danger {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* =============================
+   BUTTON
+============================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-danger {
+    background: #ef4444;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
+
+.btn-success {
+    background: #16a34a;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background: #15803d;
+}
+
+.btn-warning {
+    background: #facc15;
+    color: #000;
+}
+
+.btn-warning:hover {
+    background: #eab308;
+}
+
+.btn-secondary {
+    background: #64748b;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #475569;
+}
+
+.btn-sm {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* =============================
+   IMAGE
+============================= */
+img {
+    border-radius: 8px;
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 992px) {
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    main {
+        padding: 18px;
+    }
+}
+
+/* =============================
+   MOBILE RESPONSIVE (HP)
+============================= */
+@media (max-width: 768px) {
+
+    /* ====== HEADINGS ====== */
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    /* ====== MONITORING CARDS ====== */
+    .monitoring-cards {
+        grid-template-columns: 1fr; /* dari 2 kolom jadi 1 */
+        gap: 15px;
+    }
+
+    .card-box {
+        padding: 15px;
+    }
+
+    /* ====== FULLCALENDAR ====== */
+    #calendar {
+        padding: 10px;
+    }
+
+    .fc-toolbar {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .fc-toolbar-title {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* ====== TABLE RESPONSIVE ====== */
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .table th,
+    .table td {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    /* ====== IMAGE ====== */
+    .table img {
+        width: 70px;
+        height: auto;
+    }
+
+    /* ====== BUTTON ====== */
+    .btn {
+        font-size: 13px;
+        padding: 7px 12px;
+        margin-bottom: 5px;
+    }
+
+    /* ====== CONTENT ====== */
+    .content {
+        padding: 12px;
+    }
+
+    main {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}

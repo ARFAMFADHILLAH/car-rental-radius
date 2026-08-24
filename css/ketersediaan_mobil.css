@@ -1,0 +1,110 @@
+/* Card */
+.car-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Header mobil */
+.car-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.car-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.plate {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Status */
+.available {
+    margin-top: 10px;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.unavailable {
+    margin-top: 10px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Table */
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.schedule th, 
+.schedule td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: center;
+}
+
+.schedule th {
+    background: #f4f6f8;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+
+    .content {
+        padding: 15px;
+    }
+
+    .car-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .schedule thead {
+        display: none;
+    }
+
+    .schedule,
+    .schedule tbody,
+    .schedule tr,
+    .schedule td {
+        display: block;
+        width: 100%;
+    }
+
+    .schedule tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 8px;
+        background: #fafafa;
+    }
+
+    .schedule td {
+        border: none;
+        text-align: left;
+        padding: 4px 0;
+        font-size: 13px;
+    }
+
+    .schedule td::before {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 2px;
+        color: #555;
+    }
+
+    .schedule td:nth-child(1)::before { content: "Nama Peminjam"; }
+    .schedule td:nth-child(2)::before { content: "Dari"; }
+    .schedule td:nth-child(3)::before { content: "Sampai"; }
+    .schedule td:nth-child(4)::before { content: "Status"; }
+}
